@@ -5,5 +5,5 @@ CFLAGS += -g -Wall -Werror -pthread
 %.o: %.c *.h
 	gcc $(CFLAGS) -c -o $@ $<
 
-benchmark: benchmark.c
-	gcc $(CFLAGS) benchmark.c -o benchmark
+benchmark: main.c
+	gcc $(CFLAGS) main.c -o main

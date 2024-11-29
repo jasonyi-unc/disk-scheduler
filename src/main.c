@@ -18,13 +18,8 @@ void perform_io_test(const char *file_path, size_t io_size, size_t stride,
 
 
 int main(int argc, char *argv[]) {
-    /**
-     * argv[1] = file_path (/dev/sd)
-     * argv[2] = block_size (in KB) (4 KB) -> later converted to bytes
-     * 1073741824 = total size of the I/O operations (in bytes) (1 GB)
-     */
-
     if (argc < 6) {
+        printf("Too few arguments!\n");
         return EXIT_FAILURE;
     }
 
@@ -34,16 +29,18 @@ int main(int argc, char *argv[]) {
     bool is_random = atoi(argv[4]) != 0;
     bool is_write = atoi(argv[5]) != 0;
     size_t total_size = 1024 * 1024 * 1024; // 1 GB
-    size_t desired_iops = total_size; // Arbitrary value
+    size_t desired_iops = total_size;
 
-    perform_io_test(file_path, io_size, stride, is_random, is_write, total_size, desired_iops);
-
+    for(int i = 0; i < 5; ++i) {
+        perform_io_test(file_path, io_size, stride, is_random, is_write, total_size, desired_iops);
+    }
+    
     return 0;
 }
 
 
 void perform_io_test(const char *file_path, size_t io_size, size_t stride,
-                     int is_random, int is_write, size_t total_size, size_t desired_iops) {
+                     int is_random, int is_write, size_t total_size, size_t desired_iops) {    
     int flags = O_RDWR | O_CREAT;
 
     // checks if the program is being compiled on a Linux system
@@ -73,10 +70,8 @@ void perform_io_test(const char *file_path, size_t io_size, size_t stride,
     struct timespec start_time, end_time;
     clock_gettime(CLOCK_MONOTONIC, &start_time); // syscall that retrieves current time
 
-    while (total_iops < desired_iops) {
 
-
-
+    while (total_iops < desired_iops) {        
         // seek to the offset
         if (lseek(fd, offset, 0) == -1) {
             perror("lseek failed");
@@ -96,8 +91,11 @@ void perform_io_test(const char *file_path, size_t io_size, size_t stride,
             break;
         }
 
-        // sequential offset adjustment
-        if (!is_random) {
+        
+        if (is_random) {
+            // Generate a random offset within the valid range
+            offset = (rand() % ((total_size - io_size) / io_size)) * io_size;
+        } else {
             offset += io_size + stride;
             offset = (offset / BUFFER_ALIGN) * BUFFER_ALIGN;
         }
@@ -122,10 +120,10 @@ void perform_io_test(const char *file_path, size_t io_size, size_t stride,
            io_size / 1024.0, stride / 1024.0, is_random ? "Random" : "Sequential");
     printf("Throughput: %.2f MB/s\n", throughput);
     printf("Time Taken: %.2f seconds\n", elapsed_time);
+    printf("\n");
 
 
     // cleanup
     close(fd);
     free(buffer);
-    remove(file_path);
 }
