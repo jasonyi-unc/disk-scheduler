@@ -36,7 +36,6 @@ int main(int argc, char *argv[]) {
                          4096, 8192, 16384, 32768, 65536, 102400};
     size_t num_sizes = sizeof(sizes) / sizeof(sizes[0]);
 
-    size_t total_size = strcmp(argv[1], "/dev/sdb1") == 0 ? MB_512_IN_BYTES : GB_IN_BYTES;
 
     if(is_io_size) {
         printf("I/O size tests\n");
@@ -47,7 +46,7 @@ int main(int argc, char *argv[]) {
             printf("Testing I/O size: %zu KB\n\n", sizes[i]);
 
             for(int j = 0; j < 5; ++j) {
-                perform_io_test(file_path, size, 0, is_random, is_write, total_size, total_size);
+                perform_io_test(file_path, size, 0, is_random, is_write, GB_IN_BYTES, GB_IN_BYTES);
             }
         }
     }
@@ -62,7 +61,7 @@ int main(int argc, char *argv[]) {
             printf("Testing stride size: %zu KB\n\n", sizes[i]);
 
             for(int j = 0; j < 5; ++j) {
-                perform_io_test(file_path, io_size, size, is_random, is_write, total_size, total_size);
+                perform_io_test(file_path, io_size, size, is_random, is_write, GB_IN_BYTES, GB_IN_BYTES);
             }
         }
     }
@@ -103,7 +102,23 @@ void perform_io_test(const char *file_path, size_t io_size, size_t stride,
     clock_gettime(CLOCK_MONOTONIC, &start_time); // syscall that retrieves current time
 
 
-    while (total_iops < desired_iops) {        
+    while (total_iops < desired_iops) {     
+        if (is_random) {
+            // Generate a random offset within the valid range
+            offset = (rand() % ((total_size - io_size) / io_size)) * io_size;
+        } else {
+            offset += io_size + stride;
+            offset = (offset / BUFFER_ALIGN) * BUFFER_ALIGN;
+        }
+
+
+        if (offset + io_size > MB_512_IN_BYTES) {
+            offset = offset % (1024 * 1024 * 512);
+        }
+
+        offset = offset - offset % 4096;
+        
+           
         // seek to the offset
         if (lseek(fd, offset, 0) == -1) {
             perror("lseek failed");
@@ -121,15 +136,6 @@ void perform_io_test(const char *file_path, size_t io_size, size_t stride,
         if (result == -1) {
             perror("I/O operation failed");
             break;
-        }
-
-        
-        if (is_random) {
-            // Generate a random offset within the valid range
-            offset = (rand() % ((total_size - io_size) / io_size)) * io_size;
-        } else {
-            offset += io_size + stride;
-            offset = (offset / BUFFER_ALIGN) * BUFFER_ALIGN;
         }
 
         // sync after write
