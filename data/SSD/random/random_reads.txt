@@ -1,0 +1,368 @@
+I/O size tests
+-------------------------------------------------------
+Testing I/O size: 4 KB
+
+Read Test
+IO Size: 4.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 20.31 MB/s
+
+Read Test
+IO Size: 4.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 20.05 MB/s
+
+Read Test
+IO Size: 4.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 20.58 MB/s
+
+Read Test
+IO Size: 4.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 19.74 MB/s
+
+Read Test
+IO Size: 4.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 20.56 MB/s
+
+-------------------------------------------------------
+Testing I/O size: 8 KB
+
+Read Test
+IO Size: 8.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 39.08 MB/s
+
+Read Test
+IO Size: 8.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 36.36 MB/s
+
+Read Test
+IO Size: 8.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 39.01 MB/s
+
+Read Test
+IO Size: 8.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 37.54 MB/s
+
+Read Test
+IO Size: 8.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 38.70 MB/s
+
+-------------------------------------------------------
+Testing I/O size: 16 KB
+
+Read Test
+IO Size: 16.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 70.95 MB/s
+
+Read Test
+IO Size: 16.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 74.67 MB/s
+
+Read Test
+IO Size: 16.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 72.52 MB/s
+
+Read Test
+IO Size: 16.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 67.66 MB/s
+
+Read Test
+IO Size: 16.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 74.34 MB/s
+
+-------------------------------------------------------
+Testing I/O size: 32 KB
+
+Read Test
+IO Size: 32.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 105.49 MB/s
+
+Read Test
+IO Size: 32.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 99.20 MB/s
+
+Read Test
+IO Size: 32.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 97.36 MB/s
+
+Read Test
+IO Size: 32.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 93.49 MB/s
+
+Read Test
+IO Size: 32.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 98.26 MB/s
+
+-------------------------------------------------------
+Testing I/O size: 64 KB
+
+Read Test
+IO Size: 64.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 141.84 MB/s
+
+Read Test
+IO Size: 64.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 146.19 MB/s
+
+Read Test
+IO Size: 64.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 146.58 MB/s
+
+Read Test
+IO Size: 64.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 143.55 MB/s
+
+Read Test
+IO Size: 64.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 145.39 MB/s
+
+-------------------------------------------------------
+Testing I/O size: 128 KB
+
+Read Test
+IO Size: 128.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 185.63 MB/s
+
+Read Test
+IO Size: 128.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 187.16 MB/s
+
+Read Test
+IO Size: 128.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 183.38 MB/s
+
+Read Test
+IO Size: 128.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 185.18 MB/s
+
+Read Test
+IO Size: 128.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 184.04 MB/s
+
+-------------------------------------------------------
+Testing I/O size: 256 KB
+
+Read Test
+IO Size: 256.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 225.98 MB/s
+
+Read Test
+IO Size: 256.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 226.65 MB/s
+
+Read Test
+IO Size: 256.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 223.52 MB/s
+
+Read Test
+IO Size: 256.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 227.52 MB/s
+
+Read Test
+IO Size: 256.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 222.96 MB/s
+
+-------------------------------------------------------
+Testing I/O size: 512 KB
+
+Read Test
+IO Size: 512.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 258.87 MB/s
+
+Read Test
+IO Size: 512.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 258.78 MB/s
+
+Read Test
+IO Size: 512.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 260.55 MB/s
+
+Read Test
+IO Size: 512.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 258.55 MB/s
+
+Read Test
+IO Size: 512.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 259.92 MB/s
+
+-------------------------------------------------------
+Testing I/O size: 1024 KB
+
+Read Test
+IO Size: 1024.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 304.55 MB/s
+
+Read Test
+IO Size: 1024.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 290.11 MB/s
+
+Read Test
+IO Size: 1024.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 305.24 MB/s
+
+Read Test
+IO Size: 1024.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 304.08 MB/s
+
+Read Test
+IO Size: 1024.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 305.08 MB/s
+
+-------------------------------------------------------
+Testing I/O size: 2048 KB
+
+Read Test
+IO Size: 2048.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 316.30 MB/s
+
+Read Test
+IO Size: 2048.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 359.84 MB/s
+
+Read Test
+IO Size: 2048.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 316.69 MB/s
+
+Read Test
+IO Size: 2048.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 298.56 MB/s
+
+Read Test
+IO Size: 2048.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 289.38 MB/s
+
+-------------------------------------------------------
+Testing I/O size: 4096 KB
+
+Read Test
+IO Size: 4096.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 315.49 MB/s
+
+Read Test
+IO Size: 4096.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 315.80 MB/s
+
+Read Test
+IO Size: 4096.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 321.42 MB/s
+
+Read Test
+IO Size: 4096.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 315.57 MB/s
+
+Read Test
+IO Size: 4096.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 316.79 MB/s
+
+-------------------------------------------------------
+Testing I/O size: 8192 KB
+
+Read Test
+IO Size: 8192.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 319.88 MB/s
+
+Read Test
+IO Size: 8192.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 314.03 MB/s
+
+Read Test
+IO Size: 8192.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 320.80 MB/s
+
+Read Test
+IO Size: 8192.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 321.40 MB/s
+
+Read Test
+IO Size: 8192.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 321.44 MB/s
+
+-------------------------------------------------------
+Testing I/O size: 16384 KB
+
+Read Test
+IO Size: 16384.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 323.50 MB/s
+
+Read Test
+IO Size: 16384.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 322.57 MB/s
+
+Read Test
+IO Size: 16384.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 323.91 MB/s
+
+Read Test
+IO Size: 16384.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 324.25 MB/s
+
+Read Test
+IO Size: 16384.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 323.59 MB/s
+
+-------------------------------------------------------
+Testing I/O size: 32768 KB
+
+Read Test
+IO Size: 32768.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 326.65 MB/s
+
+Read Test
+IO Size: 32768.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 329.26 MB/s
+
+Read Test
+IO Size: 32768.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 326.17 MB/s
+
+Read Test
+IO Size: 32768.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 326.67 MB/s
+
+Read Test
+IO Size: 32768.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 327.83 MB/s
+
+-------------------------------------------------------
+Testing I/O size: 65536 KB
+
+Read Test
+IO Size: 65536.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 328.13 MB/s
+
+Read Test
+IO Size: 65536.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 327.83 MB/s
+
+Read Test
+IO Size: 65536.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 327.80 MB/s
+
+Read Test
+IO Size: 65536.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 328.85 MB/s
+
+Read Test
+IO Size: 65536.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 326.83 MB/s
+
+-------------------------------------------------------
+Testing I/O size: 102400 KB
+
+Read Test
+IO Size: 102400.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 431.49 MB/s
+
+Read Test
+IO Size: 102400.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 328.40 MB/s
+
+Read Test
+IO Size: 102400.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 329.24 MB/s
+
+Read Test
+IO Size: 102400.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 357.10 MB/s
+
+Read Test
+IO Size: 102400.00 KB, Stride: 0.00 KB, Mode: Random
+Throughput: 434.00 MB/s
