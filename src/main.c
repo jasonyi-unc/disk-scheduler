@@ -111,7 +111,7 @@ void perform_io_test(const char *file_path, size_t io_size, size_t stride,
             offset = (offset / BUFFER_ALIGN) * BUFFER_ALIGN;
         }
 
-
+        // SSD in Adams is 512 MB, so this stays below it
         if (offset + io_size > MB_512_IN_BYTES) {
             offset = offset % (1024 * 1024 * 512);
         }
@@ -150,13 +150,12 @@ void perform_io_test(const char *file_path, size_t io_size, size_t stride,
     clock_gettime(CLOCK_MONOTONIC, &end_time);
     double elapsed_time = (end_time.tv_sec - start_time.tv_sec) +
                           (end_time.tv_nsec - start_time.tv_nsec) / 1e9;
-    double throughput = (desired_iops / elapsed_time) / (1024 * 1024); // convert to MB/s
+    double throughput = (total_iops / elapsed_time) / (1024 * 1024); // convert to MB/s
 
     printf("%s Test\n", is_write ? "Write" : "Read");
     printf("IO Size: %.2f KB, Stride: %.2f KB, Mode: %s\n", 
            io_size / 1024.0, stride / 1024.0, is_random ? "Random" : "Sequential");
     printf("Throughput: %.2f MB/s\n", throughput);
-    printf("Time Taken: %.2f seconds\n", elapsed_time);
     printf("\n");
 
 
