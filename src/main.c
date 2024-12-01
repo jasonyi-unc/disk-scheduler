@@ -1,5 +1,6 @@
 #define _GNU_SOURCE // allows us to use O_DIRECT
 #define BUFFER_ALIGN 512 // align buffer to 512 bytes for O_DIRECT
+#define GB_IN_BYTES 1024*1024*1024
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -24,15 +25,43 @@ int main(int argc, char *argv[]) {
     }
 
     const char *file_path = argv[1];
-    size_t io_size = atoi(argv[2]) * 1024;
-    size_t stride = atoi(argv[3]) * 1024;
+    bool is_io_size = atoi(argv[2]) != 0;
+    bool is_stride = atoi(argv[3]) != 0;
     bool is_random = atoi(argv[4]) != 0;
     bool is_write = atoi(argv[5]) != 0;
-    size_t total_size = 1024 * 1024 * 1024; // 1 GB
-    size_t desired_iops = total_size;
 
-    for(int i = 0; i < 5; ++i) {
-        perform_io_test(file_path, io_size, stride, is_random, is_write, total_size, desired_iops);
+    // List of sizes in KB
+    size_t sizes[] = {4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 
+                         4096, 8192, 16384, 32768, 65536, 102400};
+    size_t num_sizes = sizeof(sizes) / sizeof(sizes[0]);
+
+    if(is_io_size) {
+        printf("I/O size tests\n");
+        // I/O size tests
+        for (size_t i = 0; i < num_sizes; ++i) {
+            size_t size = sizes[i] * 1024; // Convert KB to bytes
+            printf("-------------------------------------------------------\n");
+            printf("Testing I/O size: %zu KB\n\n", sizes[i]);
+
+            for(int j = 0; j < 5; ++j) {
+                perform_io_test(file_path, size, 0, is_random, is_write, GB_IN_BYTES, GB_IN_BYTES);
+            }
+        }
+    }
+
+    if(is_stride) {
+        printf("Stride tests\n");
+        size_t io_size = 1024*1024; // 1 GB
+        // stride tests
+        for (size_t i = 0; i < num_sizes; ++i) {
+            size_t size = sizes[i] * 1024; // Convert KB to bytes
+            printf("-------------------------------------------------------\n");
+            printf("Testing stride size: %zu KB\n\n", sizes[i]);
+
+            for(int j = 0; j < 5; ++j) {
+                perform_io_test(file_path, io_size, size, is_random, is_write, GB_IN_BYTES, GB_IN_BYTES);
+            }
+        }
     }
     
     return 0;
@@ -126,4 +155,5 @@ void perform_io_test(const char *file_path, size_t io_size, size_t stride,
     // cleanup
     close(fd);
     free(buffer);
+
 }
