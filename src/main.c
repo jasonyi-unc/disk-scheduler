@@ -1,6 +1,7 @@
 #define _GNU_SOURCE // allows us to use O_DIRECT
 #define BUFFER_ALIGN 512 // align buffer to 512 bytes for O_DIRECT
 #define GB_IN_BYTES 1024*1024*1024
+#define MB_512_IN_BYTES 512*1024*1024
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -35,6 +36,8 @@ int main(int argc, char *argv[]) {
                          4096, 8192, 16384, 32768, 65536, 102400};
     size_t num_sizes = sizeof(sizes) / sizeof(sizes[0]);
 
+    size_t total_size = strcmp(argv[1], "/dev/sdb1") == 0 ? MB_512_IN_BYTES : GB_IN_BYTES;
+
     if(is_io_size) {
         printf("I/O size tests\n");
         // I/O size tests
@@ -44,7 +47,7 @@ int main(int argc, char *argv[]) {
             printf("Testing I/O size: %zu KB\n\n", sizes[i]);
 
             for(int j = 0; j < 5; ++j) {
-                perform_io_test(file_path, size, 0, is_random, is_write, GB_IN_BYTES, GB_IN_BYTES);
+                perform_io_test(file_path, size, 0, is_random, is_write, total_size, total_size);
             }
         }
     }
@@ -59,7 +62,7 @@ int main(int argc, char *argv[]) {
             printf("Testing stride size: %zu KB\n\n", sizes[i]);
 
             for(int j = 0; j < 5; ++j) {
-                perform_io_test(file_path, io_size, size, is_random, is_write, GB_IN_BYTES, GB_IN_BYTES);
+                perform_io_test(file_path, io_size, size, is_random, is_write, total_size, total_size);
             }
         }
     }
