@@ -141,8 +141,7 @@ void perform_io_test(const char *file_path, size_t io_size, size_t stride,
     clock_gettime(CLOCK_MONOTONIC, &end_time);
     double elapsed_time = (end_time.tv_sec - start_time.tv_sec) +
                           (end_time.tv_nsec - start_time.tv_nsec) / 1e9;
-    double throughput = (desired_iops / elapsed_time);
-
+    double throughput = (desired_iops / elapsed_time) / (1024 * 1024); // convert to MB/s
 
     printf("%s Test\n", is_write ? "Write" : "Read");
     printf("IO Size: %.2f KB, Stride: %.2f KB, Mode: %s\n", 
