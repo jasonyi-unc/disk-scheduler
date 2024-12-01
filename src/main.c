@@ -55,13 +55,7 @@ int main(int argc, char *argv[]) {
         printf("Stride tests\n");
         // stride tests
 
-        size_t io_sizes_in_kb[] = {
-            1 * 1024, // 1 MB = 1,024 KB
-            3 * 1024, // 3 MB = 3,072 KB
-            5 * 1024, // 5 MB = 5,120 KB
-            8 * 1024, // 8 MB = 8,192 KB
-            10 * 1024 // 10 MB = 10,240 KB
-        };
+        size_t io_sizes_in_kb[] = {4, 256, 1024, 5120, 10240}; // 4KB, 256KB, 1MB, 5MB, 10MB
 
         for (size_t i = 0; i < 5; ++i) {
             size_t io_size = io_sizes_in_kb[i] * 1024; // Convert KB to bytes
