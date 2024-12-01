@@ -71,9 +71,9 @@ int main(int argc, char *argv[]) {
 
 
             for (size_t j = 0; j < num_sizes; ++j) {
-                size_t stride_size = sizes[i] * 1024; // Convert KB to bytes
+                size_t stride_size = sizes[j] * 1024; // Convert KB to bytes
                 printf("-------------------------------------------------------\n");
-                printf("Testing stride size: %zu KB\n\n", sizes[i]);
+                printf("Testing stride size: %zu KB\n\n", sizes[j]);
 
                 // 5 runs per stride size
                 for (size_t k = 0; k < 5; ++k) {
