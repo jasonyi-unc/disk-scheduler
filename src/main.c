@@ -56,26 +56,26 @@ int main(int argc, char *argv[]) {
         // stride tests
 
         size_t io_sizes_in_kb[] = {4, 256, 1024, 5120, 10240}; // 4KB, 256KB, 1MB, 5MB, 10MB
+        
+        int i = 0;
+        size_t io_size = io_sizes_in_kb[i] * 1024;
 
-        for (size_t i = 0; i < 5; ++i) {
-            size_t io_size = io_sizes_in_kb[i] * 1024; // Convert KB to bytes
-
-            printf("**********************************************************\n");
-            printf("Testing I/O size: %zu KB\n", io_sizes_in_kb[i]);
+        printf("**********************************************************\n");
+        printf("Testing I/O size: %zu KB\n", io_sizes_in_kb[i]);
 
 
-            for (size_t j = 0; j < num_sizes; ++j) {
-                size_t stride_size = sizes[j] * 1024; // Convert KB to bytes
-                printf("-------------------------------------------------------\n");
-                printf("Testing stride size: %zu KB\n\n", sizes[j]);
+        for (size_t j = 0; j < num_sizes; ++j) {
+            size_t stride_size = sizes[j] * 1024; // Convert KB to bytes
+            printf("-------------------------------------------------------\n");
+            printf("Testing stride size: %zu KB\n\n", sizes[j]);
 
-                // 5 runs per stride size
-                for (size_t k = 0; k < 5; ++k) {
-                    perform_io_test(file_path, io_size, stride_size, is_random, is_write, GB_IN_BYTES, GB_IN_BYTES);
-                }
-            
+            // 5 runs per stride size
+            for (size_t k = 0; k < 5; ++k) {
+                perform_io_test(file_path, io_size, stride_size, is_random, is_write, GB_IN_BYTES, GB_IN_BYTES);
             }
+        
         }
+        
 
     }
     
