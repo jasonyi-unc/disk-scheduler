@@ -32,9 +32,8 @@ int main(int argc, char *argv[]) {
     bool is_write = atoi(argv[5]) != 0;
 
     // List of sizes in KB
-    size_t sizes[] = {1024, 2048, 4096, 5120, 10240, 15360, 20480, 30720, 40960, 
-                        51200, 61440, 71680, 81920, 92160, 97280, 102400};
-
+    size_t sizes[] = {256, 512, 1024, 2048, 4096, 5120, 10240, 20480, 30720, 40960,
+                                         51200, 61440, 71680, 81920, 92160, 102400};
     size_t num_sizes = sizeof(sizes) / sizeof(sizes[0]);
 
 
