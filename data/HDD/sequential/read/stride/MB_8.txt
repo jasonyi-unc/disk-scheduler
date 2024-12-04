@@ -1,0 +1,368 @@
+Testing I/O size: 5120 KB
+-------------------------------------------------------
+Testing stride size: 4 KB
+
+Read Test
+IO Size: 5120.00 KB, Stride: 4.00 KB, Mode: Sequential
+Throughput: 171.35 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 4.00 KB, Mode: Sequential
+Throughput: 136.42 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 4.00 KB, Mode: Sequential
+Throughput: 130.27 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 4.00 KB, Mode: Sequential
+Throughput: 130.28 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 4.00 KB, Mode: Sequential
+Throughput: 153.58 MB/s
+
+-------------------------------------------------------
+Testing stride size: 8 KB
+
+Read Test
+IO Size: 5120.00 KB, Stride: 8.00 KB, Mode: Sequential
+Throughput: 124.47 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 8.00 KB, Mode: Sequential
+Throughput: 153.57 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 8.00 KB, Mode: Sequential
+Throughput: 109.33 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 8.00 KB, Mode: Sequential
+Throughput: 153.57 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 8.00 KB, Mode: Sequential
+Throughput: 114.62 MB/s
+
+-------------------------------------------------------
+Testing stride size: 16 KB
+
+Read Test
+IO Size: 5120.00 KB, Stride: 16.00 KB, Mode: Sequential
+Throughput: 152.92 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 16.00 KB, Mode: Sequential
+Throughput: 124.89 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 16.00 KB, Mode: Sequential
+Throughput: 152.78 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 16.00 KB, Mode: Sequential
+Throughput: 124.73 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 16.00 KB, Mode: Sequential
+Throughput: 152.81 MB/s
+
+-------------------------------------------------------
+Testing stride size: 32 KB
+
+Read Test
+IO Size: 5120.00 KB, Stride: 32.00 KB, Mode: Sequential
+Throughput: 124.16 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 32.00 KB, Mode: Sequential
+Throughput: 130.20 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 32.00 KB, Mode: Sequential
+Throughput: 124.60 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 32.00 KB, Mode: Sequential
+Throughput: 130.20 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 32.00 KB, Mode: Sequential
+Throughput: 124.57 MB/s
+
+-------------------------------------------------------
+Testing stride size: 64 KB
+
+Read Test
+IO Size: 5120.00 KB, Stride: 64.00 KB, Mode: Sequential
+Throughput: 129.71 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 64.00 KB, Mode: Sequential
+Throughput: 134.61 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 64.00 KB, Mode: Sequential
+Throughput: 127.14 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 64.00 KB, Mode: Sequential
+Throughput: 135.24 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 64.00 KB, Mode: Sequential
+Throughput: 129.89 MB/s
+
+-------------------------------------------------------
+Testing stride size: 128 KB
+
+Read Test
+IO Size: 5120.00 KB, Stride: 128.00 KB, Mode: Sequential
+Throughput: 132.12 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 128.00 KB, Mode: Sequential
+Throughput: 126.49 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 128.00 KB, Mode: Sequential
+Throughput: 117.56 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 128.00 KB, Mode: Sequential
+Throughput: 127.44 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 128.00 KB, Mode: Sequential
+Throughput: 129.18 MB/s
+
+-------------------------------------------------------
+Testing stride size: 256 KB
+
+Read Test
+IO Size: 5120.00 KB, Stride: 256.00 KB, Mode: Sequential
+Throughput: 127.85 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 256.00 KB, Mode: Sequential
+Throughput: 123.52 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 256.00 KB, Mode: Sequential
+Throughput: 131.18 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 256.00 KB, Mode: Sequential
+Throughput: 124.89 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 256.00 KB, Mode: Sequential
+Throughput: 127.45 MB/s
+
+-------------------------------------------------------
+Testing stride size: 512 KB
+
+Read Test
+IO Size: 5120.00 KB, Stride: 512.00 KB, Mode: Sequential
+Throughput: 125.65 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 512.00 KB, Mode: Sequential
+Throughput: 127.45 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 512.00 KB, Mode: Sequential
+Throughput: 126.24 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 512.00 KB, Mode: Sequential
+Throughput: 125.61 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 512.00 KB, Mode: Sequential
+Throughput: 127.46 MB/s
+
+-------------------------------------------------------
+Testing stride size: 1024 KB
+
+Read Test
+IO Size: 5120.00 KB, Stride: 1024.00 KB, Mode: Sequential
+Throughput: 135.27 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 1024.00 KB, Mode: Sequential
+Throughput: 112.66 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 1024.00 KB, Mode: Sequential
+Throughput: 133.12 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 1024.00 KB, Mode: Sequential
+Throughput: 115.30 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 1024.00 KB, Mode: Sequential
+Throughput: 133.14 MB/s
+
+-------------------------------------------------------
+Testing stride size: 2048 KB
+
+Read Test
+IO Size: 5120.00 KB, Stride: 2048.00 KB, Mode: Sequential
+Throughput: 128.28 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 2048.00 KB, Mode: Sequential
+Throughput: 142.64 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 2048.00 KB, Mode: Sequential
+Throughput: 134.71 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 2048.00 KB, Mode: Sequential
+Throughput: 134.22 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 2048.00 KB, Mode: Sequential
+Throughput: 148.82 MB/s
+
+-------------------------------------------------------
+Testing stride size: 4096 KB
+
+Read Test
+IO Size: 5120.00 KB, Stride: 4096.00 KB, Mode: Sequential
+Throughput: 121.86 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 4096.00 KB, Mode: Sequential
+Throughput: 110.54 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 4096.00 KB, Mode: Sequential
+Throughput: 117.02 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 4096.00 KB, Mode: Sequential
+Throughput: 121.93 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 4096.00 KB, Mode: Sequential
+Throughput: 122.25 MB/s
+
+-------------------------------------------------------
+Testing stride size: 8192 KB
+
+Read Test
+IO Size: 5120.00 KB, Stride: 8192.00 KB, Mode: Sequential
+Throughput: 126.35 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 8192.00 KB, Mode: Sequential
+Throughput: 124.63 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 8192.00 KB, Mode: Sequential
+Throughput: 124.63 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 8192.00 KB, Mode: Sequential
+Throughput: 122.25 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 8192.00 KB, Mode: Sequential
+Throughput: 130.00 MB/s
+
+-------------------------------------------------------
+Testing stride size: 16384 KB
+
+Read Test
+IO Size: 5120.00 KB, Stride: 16384.00 KB, Mode: Sequential
+Throughput: 122.99 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 16384.00 KB, Mode: Sequential
+Throughput: 108.78 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 16384.00 KB, Mode: Sequential
+Throughput: 121.80 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 16384.00 KB, Mode: Sequential
+Throughput: 113.13 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 16384.00 KB, Mode: Sequential
+Throughput: 117.88 MB/s
+
+-------------------------------------------------------
+Testing stride size: 32768 KB
+
+Read Test
+IO Size: 5120.00 KB, Stride: 32768.00 KB, Mode: Sequential
+Throughput: 131.61 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 32768.00 KB, Mode: Sequential
+Throughput: 113.44 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 32768.00 KB, Mode: Sequential
+Throughput: 125.20 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 32768.00 KB, Mode: Sequential
+Throughput: 113.46 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 32768.00 KB, Mode: Sequential
+Throughput: 125.32 MB/s
+
+-------------------------------------------------------
+Testing stride size: 65536 KB
+
+Read Test
+IO Size: 5120.00 KB, Stride: 65536.00 KB, Mode: Sequential
+Throughput: 112.17 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 65536.00 KB, Mode: Sequential
+Throughput: 130.63 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 65536.00 KB, Mode: Sequential
+Throughput: 115.66 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 65536.00 KB, Mode: Sequential
+Throughput: 133.60 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 65536.00 KB, Mode: Sequential
+Throughput: 117.93 MB/s
+
+-------------------------------------------------------
+Testing stride size: 102400 KB
+
+Read Test
+IO Size: 5120.00 KB, Stride: 102400.00 KB, Mode: Sequential
+Throughput: 128.58 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 102400.00 KB, Mode: Sequential
+Throughput: 115.54 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 102400.00 KB, Mode: Sequential
+Throughput: 125.36 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 102400.00 KB, Mode: Sequential
+Throughput: 133.67 MB/s
+
+Read Test
+IO Size: 5120.00 KB, Stride: 102400.00 KB, Mode: Sequential
+Throughput: 130.78 MB/s
