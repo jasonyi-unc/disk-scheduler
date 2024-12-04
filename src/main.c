@@ -2,6 +2,7 @@
 #define BUFFER_ALIGN 512 // align buffer to 512 bytes for O_DIRECT
 #define GB_IN_BYTES 1024*1024*1024
 #define MB_512_IN_BYTES 512*1024*1024
+#define MB_50_IN_BYTES 50*1024*1024
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -56,13 +57,15 @@ int main(int argc, char *argv[]) {
         // stride tests
 
         size_t io_sizes_in_kb[] = {4, 256, 1024, 5120, 10240}; // 4KB, 256KB, 1MB, 5MB, 10MB
-        
+
         int i = 0;
         size_t io_size = io_sizes_in_kb[i] * 1024;
 
         printf("**********************************************************\n");
         printf("Testing I/O size: %zu KB\n", io_sizes_in_kb[i]);
 
+        // doing 50 MB if doing write operation bc takes too long
+        size_t total_size = is_write ? MB_50_IN_BYTES : GB_IN_BYTES;
 
         for (size_t j = 0; j < num_sizes; ++j) {
             size_t stride_size = sizes[j] * 1024; // Convert KB to bytes
@@ -71,12 +74,12 @@ int main(int argc, char *argv[]) {
 
             // 5 runs per stride size
             for (size_t k = 0; k < 5; ++k) {
-                perform_io_test(file_path, io_size, stride_size, is_random, is_write, GB_IN_BYTES, GB_IN_BYTES);
+                // doing 50 MB for total_size since 1 GB takes too long - only for write operations
+                perform_io_test(file_path, io_size, stride_size, is_random, is_write, total_size, total_size);
             }
         
         }
         
-
     }
     
     return 0;
@@ -120,6 +123,7 @@ void perform_io_test(const char *file_path, size_t io_size, size_t stride,
             // Generate a random offset within the valid range
             offset = (rand() % ((total_size - io_size) / io_size)) * io_size;
         } else {
+            // sequential
             offset += io_size + stride;
             offset = (offset / BUFFER_ALIGN) * BUFFER_ALIGN;
         }
