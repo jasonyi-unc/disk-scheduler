@@ -1,9 +1,3 @@
-#define _GNU_SOURCE // allows us to use O_DIRECT
-#define BUFFER_ALIGN 512 // align buffer to 512 bytes for O_DIRECT
-#define GB_IN_BYTES 1024*1024*1024
-#define MB_512_IN_BYTES 512*1024*1024
-#define MB_50_IN_BYTES 50*1024*1024
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
@@ -14,6 +8,12 @@
 #include <stdbool.h>
 #include <sys/time.h>
 #include <sys/types.h>
+
+#define _GNU_SOURCE // allows us to use O_DIRECT
+#define BUFFER_ALIGN 512 // align buffer to 512 bytes for O_DIRECT
+#define GB_IN_BYTES 1024*1024*1024
+#define MB_512_IN_BYTES 512*1024*1024
+#define MB_50_IN_BYTES 50*1024*1024
 
 
 void perform_io_test(const char *file_path, size_t io_size, size_t stride, 
@@ -58,8 +58,8 @@ int main(int argc, char *argv[]) {
 
         size_t io_sizes_in_kb[] = {4, 256, 1024, 5120, 10240}; // 4KB, 256KB, 1MB, 5MB, 10MB
 
-        int i = 0;
-        size_t io_size = io_sizes_in_kb[i] * 1024;
+        int i = 4; // change i value here to whatever io_size you want for the stride tests
+        size_t io_size = io_sizes_in_kb[i] * 1024; // Convert KB to bytes
 
         printf("**********************************************************\n");
         printf("Testing I/O size: %zu KB\n", io_sizes_in_kb[i]);
@@ -157,7 +157,16 @@ void perform_io_test(const char *file_path, size_t io_size, size_t stride,
 
         // sync after write
         if (is_write) {
-            fsync(fd);
+            #ifdef __APPLE__
+            // macOS-specific sync for write durability
+            // made since adams crashed
+            if (fcntl(fd, F_FULLFSYNC) == -1) {
+                perror("fcntl fullfsync failed");
+                break;
+            }
+            #else
+                fsync(fd);
+            #endif
         }
 
 
