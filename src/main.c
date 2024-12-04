@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+#define _GNU_SOURCE // allows us to use O_DIRECT
+#define BUFFER_ALIGN 512 // align buffer to 512 bytes for O_DIRECT
+#define GB_IN_BYTES 1024*1024*1024
+#define MB_512_IN_BYTES 512*1024*1024
+#define MB_50_IN_BYTES 50*1024*1024
+
+>>>>>>> 331d79815b443063a25f7f38bdc151ac345327f1
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
@@ -58,8 +67,13 @@ int main(int argc, char *argv[]) {
 
         size_t io_sizes_in_kb[] = {4, 256, 1024, 5120, 10240}; // 4KB, 256KB, 1MB, 5MB, 10MB
 
+<<<<<<< HEAD
         int i = 4; // change i value here to whatever io_size you want for the stride tests
         size_t io_size = io_sizes_in_kb[i] * 1024; // Convert KB to bytes
+=======
+        int i = 0;
+        size_t io_size = io_sizes_in_kb[i] * 1024;
+>>>>>>> 331d79815b443063a25f7f38bdc151ac345327f1
 
         printf("**********************************************************\n");
         printf("Testing I/O size: %zu KB\n", io_sizes_in_kb[i]);
