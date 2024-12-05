@@ -1,7 +1,7 @@
 # Write Up
 
 PID: 730475868 <br>
-PID:           <br>
+PID: 730506302 <br>
 PID:           <br>
 I pledge the COMP530 honor code.
 
@@ -52,6 +52,9 @@ Unable to procure data. Please read the [Note](#note).
 
 Unable to procure data. Please read the [Note](#note).
 
+# SSD
+SSD performance is highly influenced by the combination of I/O size and stride size, especially in sequential read and write operations. Larger I/O sizes consistently achieve higher throughput by minimizing overhead and fully utilizing the SSD’s bandwidth, while smaller I/O sizes are less efficient due to frequent processing of small data chunks. Stride size has limited impact in sequential workloads, as the SSD handles contiguous data efficiently. Optimal performance is observed with large I/O sizes (8 MB or 10 MB), where throughput stabilizes near the SSD’s peak capability, making them ideal for high-performance workloads.n Random writes are definitely slower than random reads since writes may require some additional overhead work like re-writing.
+
 ### SSD Sequential Read
 ![SSD Sequential Read](assets/SSD%20Sequential%20Read.png)
 
@@ -70,16 +73,37 @@ Unable to procure data. Please read the [Note](#note).
 
 Overall, reads had a higher throughput than writes, which shows that SSDs are more equipped for read-heavy tasks.
 
-### SSD Stride Read
+### SSD Sequential Stride Read
 ![SSD Stride Read](assets/SSD%20Sequential%20Stride%20Read.png)
 
 - Clearly smaller I/O sizes show much lesser throughput compared to bigger sizes.
 
 - There is a sharp fall at the start with smaller strides with a lot of variance as well. But this stabilizes as the stride size increases and plateaus very early.
 
-- At smaller strides, frequent access to non-contiguous data leads to higher latency for fetching data. As the stride size increases, contiguous blocks can be read, allowing higher throughput.
+- Stride size causes variance for throughput due to stride size matching the size of the internal block sizes which leads to smoother performance.
 
-### SSD Stride Write
+### SSD Sequential Stride Write
 ![SSD Stride Write](assets/SSD%20Sequential%20Stride%20Write.png)
 
-- 
+- Once again, higher I/O sizes get significantly higher throughput here.
+
+- Smaller sizes have very high overhead and the performance barely increases for 4KB, 256KB. Throughput is highest for the highest size of 10MB.
+
+- Differences occur in the stride size due to the stride sizes aligning with the internal block sizes.
+
+### SSD Random Read
+
+![SSD Random Read](assets/SSD%20Random%20Read.png)
+
+- Throughput increases sharply for small I/O sizes, stabilizing around 300–350 MB/s after ~10,000 KB.
+
+- For random reads, larger I/O sizes reduce the frequency of access requests and increase efficiency by fetching more data per request.
+
+### SSD Random Write
+![SSD Random Writw](assets/SSD%20Random%20Write.png)
+
+- Throughput rises sharply for small I/O sizes, peaks early (~4,000–10,000 KB), and stabilizes around 150–200 MB/s
+
+- While throughput stabilizes for higher sizes, there is a lot of variability seen as opposed to reads.
+
+- Random writes can require erasure of some blocks to accommodate the new write which could explain higher variability.
